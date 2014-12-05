@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: webdb.uvm.edu
--- Generation Time: Dec 04, 2014 at 06:38 PM
+-- Generation Time: Dec 05, 2014 at 05:42 AM
 -- Server version: 5.5.40-36.1-log
 -- PHP Version: 5.3.3
 
@@ -58,19 +58,20 @@ CREATE TABLE IF NOT EXISTS `User` (
   `deviceID` varchar(32) NOT NULL,
   `deviceToken` varchar(64) NOT NULL,
   `name` varchar(16) NOT NULL,
-  `email` varchar(32) NOT NULL,
+  `emailAddress` varchar(32) NOT NULL,
   `badgeCount` int(1) NOT NULL,
   `isAdmin` int(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `User`
 --
 
-INSERT INTO `User` (`ID`, `deviceID`, `deviceToken`, `name`, `email`, `badgeCount`, `isAdmin`) VALUES
-(1, '40B8376B0E954317BE613ED0E325EF82', '3568f84ac515f5f66759b6077dbc231654da1eb9117b3f87f58a4bad4faae599', '', '', 4, 0),
-(3, 'B44CF1BD9A7B43809C37EA7A8B8035C1', '62fe682d3877656301c830ea22a509a02e789bf22b55348ab2aebaf557150f63', '', '', 4, 0),
-(4, '760A1D81F09C4AF99B355C8FA7B314A7', 'b24de4c7815c3e6d1f7c13c7520deb2bcf3ae975a13ce91fc854cab5ea012812', '', '', 4, 0);
+INSERT INTO `User` (`ID`, `deviceID`, `deviceToken`, `name`, `emailAddress`, `badgeCount`, `isAdmin`) VALUES
+(1, '40B8376B0E954317BE613ED0E325EF82', '3568f84ac515f5f66759b6077dbc231654da1eb9117b3f87f58a4bad4faae599', '', '', 6, 0),
+(3, 'B44CF1BD9A7B43809C37EA7A8B8035C1', '62fe682d3877656301c830ea22a509a02e789bf22b55348ab2aebaf557150f63', '', '', 6, 0),
+(4, '760A1D81F09C4AF99B355C8FA7B314A7', 'b24de4c7815c3e6d1f7c13c7520deb2bcf3ae975a13ce91fc854cab5ea012812', '', '', 6, 0),
+(5, '4DC35C0428E44A6B86BFA808482EF5E0', 'f3d02c954d793e9e4b71209bfeb31a00f9f34f903c2c7f210aa0fb6835c519d6', '', '', 2, 0);
 
 --
 -- Indexes for dumped tables
@@ -92,7 +93,7 @@ ALTER TABLE `Event_User`
 -- Indexes for table `User`
 --
 ALTER TABLE `User`
- ADD PRIMARY KEY (`ID`), ADD UNIQUE KEY `deviceToken` (`deviceToken`), ADD UNIQUE KEY `deviceID` (`deviceID`);
+ ADD PRIMARY KEY (`ID`), ADD UNIQUE KEY `deviceToken` (`deviceToken`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -112,7 +113,7 @@ MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `User`
 --
 ALTER TABLE `User`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

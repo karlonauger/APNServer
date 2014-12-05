@@ -8,7 +8,7 @@ class User extends DatabaseObject
     private $deviceID = null;
     private $deviceToken = null;
     private $name = "";
-    private $email = "";
+    private $emailAddress = "";
     private $badgeCount = 0;
     private $isAdmin = 0;//false
 
@@ -55,7 +55,7 @@ class User extends DatabaseObject
             $this->deviceID = $row["deviceID"];
             $this->deviceToken = $row["deviceToken"];
             $this->name = $row["name"];
-            $this->email = $row["email"];
+            $this->emailAddress = $row["emailAddress"];
             $this->badgeCount = $row["badgeCount"];
             $this->isAdmin = $row["isAdmin"];
         }
@@ -70,7 +70,7 @@ class User extends DatabaseObject
             "deviceID" => $this->deviceID,
             "deviceToken" => $this->deviceToken,
             "name" => $this->name,
-            "email" => $this->email,
+            "emailAddress" => $this->emailAddress,
             "badgeCount" => $this->badgeCount,
             "isAdmin" => $this->isAdmin
         );
@@ -113,12 +113,12 @@ class User extends DatabaseObject
         $this->name = $name;
     }
 
-    public function getEmail(){
-        return $this->email;
+    public function getEmailAddress(){
+        return $this->emailAddress;
     }
 
-    public function setEmail($email){
-        $this->email = $email;
+    public function setEmailAddress($emailAddress){
+        $this->emailAddress = $emailAddress;
     }
 
     public function getBadgeCount(){
